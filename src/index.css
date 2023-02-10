@@ -1,0 +1,59 @@
+@font-face {
+  /* font-family: 'Marck Script';
+  src: local('Marck Script'), local('MarckScript-Regular'), url("./fonts/MarckScript/marckscript.woff2") format('woff2'), url('./fonts/MarckScript/marckscript.woff') format('woff'), url('./fonts/MarckScript/marckscript.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal; */
+  /* font-family: 'Classica One';
+	src: url('./fonts/ClassicaOne/ClassicaOne.woff2') format('woff2'), url('./fonts/ClassicaOne/ClassicaOne.woff') format('woff');
+	font-weight: 400;
+	font-style: normal; */
+  font-family: 'JakobCTT';
+	src:  url('./fonts/jakobctt_8b806cbf869f1c45daf1949a025cd519.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'JakobCTT';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'JakobCTT',
+    monospace;
+}
+
+:root {
+  --colorBackgroundAll: #bbbbbbb3;
+  --colorHeader: #3B643B;
+  --colorText: rgb(247, 235, 235);
+  --tributeAfterBefore: #bbbbbbb3;
+  --titleSongColor: #e7edee;
+  
+  --allBackroundImage: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23c6e816' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  /* --allBackroundImage: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23e8e3f0' fill-opacity='0.51'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+  --textShadow: 0px 1px 0px #fafafa;
+  --backGround: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e2e2e2));
+  --backGRound: -moz-linear-gradient(top, #eee, #e2e2e2);
+  --boxShadow: 8px -8px 18px 8px rgba(241, 244, 246, 0.43);
+
+
+  --searchBackground: #18191f;
+  --searchText: #ffffff;
+  --searchPlaceHolder: #575a77;
+  --playerBackground: #18191f;
+  
+  --timeColor: #ffffff;
+  --progressSlider: #9440f3;
+  --progressUsed: #ffffff;
+  --progressLeft: #151616;
+  --volumeSlider: #9440f3;
+  --volumeUsed: #ffffff;
+  --volumeLeft:  #151616;
+  --playlistBackground: #18191f;
+  --playlistText: #575a77;
+  --playlistBackgroundHoverActive:  #18191f;
+  --playlistTextHoverActive: #ffffff;
+}
