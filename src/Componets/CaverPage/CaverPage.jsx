@@ -106,13 +106,14 @@ class CaverPage extends React.Component {
                 }
                 <div>
                   {/* <PlayList songs = {this.state.songs}/> */}
-                  
+                  <a className={classes.linkTo} href="https://trdmitr.github.io/alltributes/#/" target="_blank" rel="noopener noreferrer"> Все трибьюты </a>
                   {playList(this.props.songs)}
                   <Link to="/">
                     <button className={classes.btnHome}>Home</button>
                   </Link>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>
