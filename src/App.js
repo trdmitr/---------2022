@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import CaverPage from "./Componets/CaverPage/CaverPage";
 import HomePage from './Componets/HomePage/HomePage';
-import SinglOne from './Componets/SinglOne/SinglOne';
+// import SinglOne from './Componets/SinglOne/SinglOne';
 import Papa from "papaparse";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -23,8 +23,9 @@ class App extends Component {
   }
   this.updateData = this.updateData.bind(this);
   }
-  componentDidMount() {
-    Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vS4Vmb6lazYnJQAF0HrxARNWEbWkYGngrMp4FXLT_Ym4zK4WTbYVjbb11sAqihyo932tg_CBGSVIcq4/pub?output=csv",
+  componentDidMount() { 
+   
+  Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vS4Vmb6lazYnJQAF0HrxARNWEbWkYGngrMp4FXLT_Ym4zK4WTbYVjbb11sAqihyo932tg_CBGSVIcq4/pub?output=csv",
       {
         download: true,
         header: true,
@@ -38,12 +39,14 @@ class App extends Component {
         }
       }
     );
+ 
+    
   }
   updateData = (result) => {
-    console.log(this.state.loading);
+    // console.log(this.state.loading);
     const data = result.data
     this.setState({ ...this.state, songs: data });
-    console.log(this.state.loading);
+    // console.log(this.state.loading);
   }
   render() {
     return (
@@ -52,7 +55,7 @@ class App extends Component {
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route path="/cavers" element={<CaverPage songs = {this.state.songs} loading = {this.state.loading}/>} />
-            <Route path="/cavers/:id" element={<SinglOne songs = {this.state.songs} />} />
+            {/* <Route path="/cavers/:id" element={<SinglOne songs = {this.state.songs} />} /> */}
             <Route path="*" element={<Notfound />} />
           </Routes>
         </Router>

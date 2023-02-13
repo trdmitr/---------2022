@@ -22,7 +22,7 @@ export default class Img extends React.Component{
         if (!this.state.url){
     return <Loader/>;
   }
-	return <img src = {this.state.url} alt={this.props.imgAlt}/>;
+	return <img src = {this.props.imgUrl} alt={this.props.imgAlt}/>;
 	}   
   
 }
