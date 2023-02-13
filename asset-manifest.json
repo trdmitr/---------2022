@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Helavissa2022/static/css/main.0a7eee39.css",
-    "main.js": "/Helavissa2022/static/js/main.605c6003.js",
+    "main.js": "/Helavissa2022/static/js/main.6b314686.js",
     "static/js/787.8d407b34.chunk.js": "/Helavissa2022/static/js/787.8d407b34.chunk.js",
     "static/media/jakobctt_woff": "/Helavissa2022/static/media/jakobctt_8b806cbf869f1c45daf1949a025cd519.69b87b6f724e3c025bee.woff",
     "index.html": "/Helavissa2022/index.html",
     "main.0a7eee39.css.map": "/Helavissa2022/static/css/main.0a7eee39.css.map",
-    "main.605c6003.js.map": "/Helavissa2022/static/js/main.605c6003.js.map",
+    "main.6b314686.js.map": "/Helavissa2022/static/js/main.6b314686.js.map",
     "787.8d407b34.chunk.js.map": "/Helavissa2022/static/js/787.8d407b34.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a7eee39.css",
-    "static/js/main.605c6003.js"
+    "static/js/main.6b314686.js"
   ]
 }
