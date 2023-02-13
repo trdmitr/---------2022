@@ -11,13 +11,15 @@ export default class Img extends React.Component{
     
   }
  componentDidMount() { 
-    fetch(this.props.imgUrl)
-      .then(response => response.blob())
-      .then((image) => {
-        this.setState({url: URL.createObjectURL(image)});     
-      });
-    }
-    
+  const app = async () => {
+    const obj = await fetch(this.props.imgUrl)
+    .then(response => response.blob())
+    .then((image) => {
+          this.setState({url: URL.createObjectURL(image)});     
+        });
+  }
+  app()
+}
     render() {
         if (!this.state.url){
     return <Loader/>;
