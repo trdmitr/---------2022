@@ -214,8 +214,8 @@
   
   audio::-webkit-media-controls-enclosure {
   
-    background-color: #e6d6b4;
-    text-shadow: -1px -1.6px 0px #b7a4cc;
+    background-color: #a09f9b;
+    text-shadow: -1px -1.6px 0px #e4e0e7;
     box-shadow: var(--boxShadow);
   
   }

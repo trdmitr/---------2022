@@ -1,5 +1,5 @@
 import React from "react";
-import Papa from "papaparse";
+// import Papa from "papaparse";
 // import ReactPlayer from "react-player";
 import Modal from "../Modal/ModalR";
 import "../UI/Mobile.css"
@@ -31,7 +31,16 @@ class CaverPage extends React.Component {
   handleHideDialog = () => {
     this.setState({ ...this.state, show: false });
   };
+  // navigateToSingl = (id) => {
+  //   return <Navigate to ={ `/cavers/${id}`} />;
+  // }
   render() {
+    const { loading } = this.props.loading;
+
+    console.log("YYYYY",this.props.loading);
+    if(loading) { 
+      return <Loader/>;
+    }
     return (
       <div className="device device-iphone-x">
         <div className="device-frame">
@@ -41,14 +50,18 @@ class CaverPage extends React.Component {
                 {
                   this.props.songs.map((song, key) => (
                     <div className={classes.media}
-                      key={song.id} >
+                      key={song.id} >  
                       <div className={classes.mediaImage_modal} onClick={() => {
                         this.handleShowDialog(song.id);
-                      }}><Suspense fallback={<div><Loader /></div>}>
+                      }} >
+                      <Suspense fallback={<div><Loader /></div>}>
                           <img src={song.photo} width={80} alt={song.name} />
                           </Suspense>
                       </div>
                       <span>{song.name}</span>
+                      {/* <button onClick={() => {
+                            <Navigate replace={true} to ={`/`} songs = {this.state.songs}/>
+                            console.log("click", song.id);}}>Переход</button> */}
                       {this.state.show && this.state.selected === song.id && (
                         <Modal show={this.state.show}
                           songs={this.state.songs} selId={this.state.selected}
@@ -92,7 +105,7 @@ class CaverPage extends React.Component {
                 <div>
                   {/* <PlayList songs = {this.state.songs}/> */}
                   
-                  {playList(this.state.songs)}
+                  {playList(this.props.songs)}
                   <Link to="/">
                     <button className={classes.btnHome}>Home</button>
                   </Link>

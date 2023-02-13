@@ -19,6 +19,7 @@ class App extends Component {
   this.state = {
     songs: [0],
     songsEror: "",
+    loading: true
   }
   this.updateData = this.updateData.bind(this);
   }
@@ -29,6 +30,7 @@ class App extends Component {
         header: true,
         worker: true,
         skipEmptyLines: true,
+        
         complete: this.updateData,
         error: (error) => {
           console.error(error);
@@ -38,9 +40,10 @@ class App extends Component {
     );
   }
   updateData = (result) => {
-    console.log(result.data);
+    console.log(this.state.loading);
     const data = result.data
     this.setState({ ...this.state, songs: data });
+    console.log(this.state.loading);
   }
   render() {
     return (
@@ -48,8 +51,8 @@ class App extends Component {
         <Router>
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-            <Route path="/cavers" element={<CaverPage songs = {this.state.songs} />} />
-            <Route path='/cavers/:id' element={<SinglOne />} />
+            <Route path="/cavers" element={<CaverPage songs = {this.state.songs} loading = {this.state.loading}/>} />
+            <Route path="/cavers/:id" element={<SinglOne songs = {this.state.songs} />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
         </Router>
