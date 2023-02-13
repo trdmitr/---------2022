@@ -1,8 +1,8 @@
 {
-  "name": "modal-go",
+  "name": "helavissa2022",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://trdmitr.github.io/Letov-2022/",
+  "homepage": "https://trdmitr.github.io/Helavissa2022/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
