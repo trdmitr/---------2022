@@ -6,11 +6,11 @@ export default class Img extends React.Component{
    constructor(props) {
     super(props);
     this.state = { 
-     url: null
+     url: ""
 	};
     
   }
- componentDidMount() {   
+ componentDidMount() { 
     fetch(this.props.imgUrl)
       .then(response => response.blob())
       .then((image) => {
