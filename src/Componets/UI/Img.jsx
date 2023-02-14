@@ -15,10 +15,17 @@ export default class Img extends React.Component{
     if (!this.props.imgUrl){
       return <Loader/>; }
      fetch(this.props.imgUrl)
+     .then(function (response) {
+      if (response.status !== 200) {
+        return Promise.reject(new Error(response.statusText))
+      }
+      return Promise.resolve(response)
+    })
     .then(response =>  response.blob())
     .then((image) => {
       this.setState({url: URL.createObjectURL(image)});     
-        });
+     });
+     
   }
   app()
 }
