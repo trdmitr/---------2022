@@ -27,3 +27,15 @@ export const playList = (propSong) => {
   )
  
 } 
+
+export const tzitata = (imgLink) => {
+  return (
+    <div className={classes.tziTata}>
+       {
+      imgLink.includes('http') ? <img className={classes.tziImage} src={imgLink} width={80} alt="Цитаты" />
+        : <p>{imgLink}</p>
+    }
+    </div>
+   
+  )
+}

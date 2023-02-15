@@ -57,15 +57,6 @@ const Player = ({songs, songError}) => {
     return container;
 }
 ) 
-    
-  // const mapTrack = (fields) => songs.map(u1 => fields.reduce((u2, f1) => {
-  //   u2[f1] = u1[f1];
-  //   return u2;
-  // }, {}));
-
-  // const audiosongs1 = mapTrack(["name", "audio1"]);
-  
-
     const audioList = useMemo(() => { 
       return  [...audiosongs1, ...audiosongs2, ...audiosongs3, ...audiosongs4, ...audiosongs5, ...audiosongs6]
  .filter(e => e.src !== '');

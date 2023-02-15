@@ -237,10 +237,27 @@
   
   .tziImage {
     
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     height: auto;
     width: 100%;
     
+  }
+  .tziTata {
+    /* position:sticky; */
+    font-size: 0.5em;
+    padding: 0.5em; 
+    /* height: 76rem; */
+      margin-top: 10px;
+      font-size: 2.5em;
+      text-align: center;
+      background-color: #444;
+      text-shadow: var(--textShadow);
+      box-shadow: var(--boxShadow);
+      border-radius: 1em;
+      /* opacity:70% */
+  }
+  .tziTata p {
+    font-size: 0.5em;
   }
   .btnHome {
     /* background-color: #bf6947; */

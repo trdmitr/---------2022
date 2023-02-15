@@ -25,7 +25,7 @@ class App extends Component {
   }
   componentDidMount() { 
    
-  Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vS4Vmb6lazYnJQAF0HrxARNWEbWkYGngrMp4FXLT_Ym4zK4WTbYVjbb11sAqihyo932tg_CBGSVIcq4/pub?output=csv",
+  Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vRBQ847ey_0J68AbS-jSJD8LwtsxtFK3tbX5lSoNxhgqwKy6R9gz2ITVOJXzAT-IPkPoNIZBgPcrDC_/pub?output=csv",
       {
         download: true,
         header: true,

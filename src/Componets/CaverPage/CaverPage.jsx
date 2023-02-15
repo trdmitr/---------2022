@@ -8,7 +8,7 @@ import classes from "./CaverPage.module.css"
 import { Link } from "react-router-dom";
 import Img from "../UI/Img";
 // import AudioList from "../Player/PlayList"
-import {audioSource} from "../Utils/singContent"
+import {audioSource, tzitata} from "../Utils/singContent"
 import {videoSource} from "../Utils/singContent"
 import {playList} from "../Utils/singContent"
 // import { Suspense } from "react";
@@ -94,9 +94,11 @@ class CaverPage extends React.Component {
                               {videoSource(song.video2, song.video_name2)}
                               {videoSource(song.video3, song.video_name3)}
                             </div>
-                            <div className={classes.tziTata}>
-                              <img className={classes.tziImage} src={song.picture} width={80} alt="Цитаты" />
-                            </div>
+                            {/* <div className={classes.tziTata}> */}
+                              {/* <img className={classes.tziImage} src={song.picture} width={80} alt="Цитаты" /> */}
+                               {/* <p>{song.picture}</p> */}
+                               {tzitata(song.picture)}
+                            {/* </div> */}
                           </div>
                         </Modal>
                       )}
