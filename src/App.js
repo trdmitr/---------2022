@@ -25,7 +25,7 @@ class App extends Component {
   }
   componentDidMount() { 
    
-  Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vRBQ847ey_0J68AbS-jSJD8LwtsxtFK3tbX5lSoNxhgqwKy6R9gz2ITVOJXzAT-IPkPoNIZBgPcrDC_/pub?output=csv",
+  Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vS4Vmb6lazYnJQAF0HrxARNWEbWkYGngrMp4FXLT_Ym4zK4WTbYVjbb11sAqihyo932tg_CBGSVIcq4/pub?output=csv",
       {
         download: true,
         header: true,
@@ -39,28 +39,25 @@ class App extends Component {
         }
       }
     );
- 
-    
   }
   updateData = (result) => {
-    // console.log(this.state.loading);
     const data = result.data
     this.setState({ ...this.state, songs: data });
-    // console.log(this.state.loading);
   }
   render() {
+    const { songs, loading } = this.state
     return (
       <Fragment>
         <Router>
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-            <Route path="/cavers" element={<CaverPage songs = {this.state.songs} loading = {this.state.loading}/>} />
+            <Route path="/cavers" element={<CaverPage songs={songs} loading={loading} />} />
             {/* <Route path="/cavers/:id" element={<SinglOne songs = {this.state.songs} />} /> */}
             <Route path="*" element={<Notfound />} />
           </Routes>
         </Router>
-      </Fragment> 
- );
+      </Fragment>
+    );
   }
 }
 

@@ -4,9 +4,7 @@ import "./modal.css";
     render() {
         return (
             <div className="modal" id="modal">
-             <div className="content">{this.props.children}
-             {/* <p>{singls.name}</p>  */}
-             </div>
+             <div className="content">{this.props.children}</div>             
             </div>
           );
     }

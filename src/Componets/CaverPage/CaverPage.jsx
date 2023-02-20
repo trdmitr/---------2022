@@ -1,6 +1,4 @@
 import React from "react";
-// import Papa from "papaparse";
-// import ReactPlayer from "react-player";
 import Modal from "../Modal/ModalR";
 import "../UI/Mobile.css"
 // import Loader from "../Loader/Loader";
@@ -12,6 +10,7 @@ import {audioSource, tzitata} from "../Utils/singContent"
 import {videoSource} from "../Utils/singContent"
 import {playList} from "../Utils/singContent"
 // import { Suspense } from "react";
+
 class CaverPage extends React.Component {
   
   constructor(props) {
@@ -31,16 +30,7 @@ class CaverPage extends React.Component {
   handleHideDialog = () => {
     this.setState({ ...this.state, show: false });
   };
-  // navigateToSingl = (id) => {
-  //   return <Navigate to ={ `/cavers/${id}`} />;
-  // }
   render() {
-    // const { loading } = this.props.loading;
-
-    // console.log("YYYYY",this.props.loading);
-    // if(loading) { 
-    //   return <Loader/>;
-    // }
     return (
       <div className="device device-iphone-x">
         <div className="device-frame">
@@ -50,19 +40,14 @@ class CaverPage extends React.Component {
                 {
                   this.props.songs.map((song) => (
                     <div className={classes.media}
-                      key={song.id} >  
+                      key={song.id} >
                       <div className={classes.mediaImage_modal} onClick={() => {
                         this.handleShowDialog(song.id);
                       }} >
-                      {/* <Suspense fallback={<div><Loader /></div>}> */}
-                          {/* <img src={song.photo} width={80} alt={song.name} /> */}
-                          <Img imgUrl={song.photo} imgAlt={song.name}/>
-                          {/* </Suspense> */}
+                        <Img imgUrl={song.photo} imgAlt={song.name} />
                       </div>
-                      <span>{song.name}</span>
-                      {/* <button onClick={() => {
-                            <Navigate replace={true} to ={`/`} songs = {this.state.songs}/>
-                            console.log("click", song.id);}}>Переход</button> */}
+                      <span>{song.name}
+                      </span>
                       {this.state.show && this.state.selected === song.id && (
                         <Modal show={this.state.show}
                           songs={this.state.songs} selId={this.state.selected}
@@ -73,7 +58,6 @@ class CaverPage extends React.Component {
                           </button>
                           <div className={classes.mediaSong} key={song.id}>
                             <img className={classes.mediaImage_modal} src={song.photo} width={80} alt={song.name} />
-                            
                             <div className={classes.headerSong}>
                               <p>{song.name}</p></div>
                             <a className={[classes.linkTo, song.linkTo ? '' : classes.mediaHidden].join(' ')} href={song.linkTo} target="_blank" rel="noopener noreferrer"> Канал исполнителя </a>
@@ -94,11 +78,7 @@ class CaverPage extends React.Component {
                               {videoSource(song.video2, song.video_name2)}
                               {videoSource(song.video3, song.video_name3)}
                             </div>
-                            {/* <div className={classes.tziTata}> */}
-                              {/* <img className={classes.tziImage} src={song.picture} width={80} alt="Цитаты" /> */}
-                               {/* <p>{song.picture}</p> */}
-                               {tzitata(song.picture)}
-                            {/* </div> */}
+                            {tzitata(song.picture)}                        
                           </div>
                         </Modal>
                       )}
@@ -106,16 +86,15 @@ class CaverPage extends React.Component {
                   )
                   )
                 }
-                <div>
-                  {/* <PlayList songs = {this.state.songs}/> */}
-                  <a className={classes.linkTo} href="https://trdmitr.github.io/alltributes/#/" target="_blank" rel="noopener noreferrer"> Все трибьюты </a>
+                <div>                 
                   {playList(this.props.songs)}
                   <Link to="/">
                     <button className={classes.btnHome}>Home</button>
                   </Link>
                 </div>
+                <a className={[!this.state.show ? classes.linkTo : classes.mediaHidden].join(' ')} 
+                href="https://trdmitr.github.io/alltributes/#/" target="_blank" rel="noopener noreferrer"> Все трибьюты </a>
               </div>
-              
             </div>
           </div>
         </div>
